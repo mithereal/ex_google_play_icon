@@ -39,7 +39,7 @@ defmodule GooglePlayIcon do
       end)
       |> Enum.join(",")
 
-    "<section class=\"mobile-icons\">
+    "<section class=\"play-store-mobile-icons\">
     <a id=\"GooglePlayIcon\" class=\"play-store-mobile-icon\" href=\"https://play.google.com/store/apps/details?id=#{google_play_id} \"
        target=\"_blank\" name=\"google\">
         <picture>
