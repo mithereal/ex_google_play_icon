@@ -21,9 +21,9 @@ defmodule GooglePlayIcon do
       ) do
     media_sources =
       Enum.map(images, fn {image, width, type, image_type} ->
-        '<source media="(#{type}: #{width})"
-                    srcset="#{image}"
-                    type="image/#{image_type}">'
+        "<source media=\"(#{type}: #{width})\"
+                    srcset=\"#{image}\"
+                    type=\"image/#{image_type}\">"
       end)
       |> Enum.join()
 
