@@ -21,7 +21,10 @@ in your layout template place the following in the footer block
 ```elixir
 google_play_id = "122223232"
 main_image = "path/to/image"
-images = [{"path/to/image", "700px", "device-width", "image/jpeg"}]
+images = [
+{"path/to/image", "700px", "min-width", "image/jpeg"},
+{"path/to/image", "1400px", "max-width", "image/jpeg"}
+]
 text = "this is the alt text"
 ## render the defaults
 GooglePlayIcon.render(google_play_id, main_image)
