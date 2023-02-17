@@ -16,9 +16,9 @@ defmodule GooglePlayIcon do
   def render(
         google_play_id,
         default_image \\ "/images/play_store.jpg",
-        unit \\ "px",
         images \\ [],
-        alt_text \\ "Google Play Store Icon"
+        alt_text \\ "Google Play Store Icon",
+        unit \\ "px"
       ) do
     media_sources =
       Enum.map(images, fn {image, width, type, image_type} ->
