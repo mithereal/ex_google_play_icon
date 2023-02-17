@@ -17,11 +17,12 @@ defmodule GooglePlayIcon do
         google_play_id,
         default_image \\ "/images/play_store.jpg",
         images \\ [],
-        alt_text \\ "Google Play Store Icon"
+        alt_text \\ "Google Play Store Icon",
+        unit \\ "px"
       ) do
     media_sources =
       Enum.map(images, fn {image, width, type, image_type} ->
-        "<source media=\"(#{type}: #{width})\"
+        "<source media=\"(#{type}: #{width}#{unit})\"
                     srcset=\"#{image}\"
                     type=\"image/#{image_type}\">"
       end)
@@ -35,7 +36,7 @@ defmodule GooglePlayIcon do
 
     sizes =
       Enum.map(images, fn {_image, width, _type, _image_type} ->
-        "(max-width: #{width}px) #{width}px"
+        "(max-width: #{width}#{unit}) #{width}#{unit}"
       end)
       |> Enum.join(",")
 
