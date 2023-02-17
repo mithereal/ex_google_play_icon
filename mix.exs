@@ -12,7 +12,7 @@ defmodule GooglePlayIcon.MixProject do
       source_url: "https://github.com/mithereal/ex_google_play_icon",
       description: "Icon and Link to the google app on the app store",
       docs: docs(),
-      package: package(),
+      package: package()
     ]
   end
 

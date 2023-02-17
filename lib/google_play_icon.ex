@@ -13,7 +13,12 @@ defmodule GooglePlayIcon do
 
   """
 
-  def render(images, default_image \\ "/images/play_store.jpg", alt_text \\ "Google Play Store Icon") do
+  def render(
+        google_play_id,
+        default_image \\ "/images/play_store.jpg",
+        images \\ [],
+        alt_text \\ "Google Play Store Icon"
+      ) do
     media_sources =
       Enum.map(images, fn {image, width, type, image_type} ->
         '<source media="(#{type}: #{width})"
@@ -35,7 +40,7 @@ defmodule GooglePlayIcon do
       |> Enum.join(",")
 
     "<section class=\"mobile-icons\">
-    <a id=\"GooglePlayIcon\" class=\"mobile-icon\" href=\"https://play.google.com/store/apps/details?id=#{Application.get_env(:api, :google_play_id, "")} \"
+    <a id=\"GooglePlayIcon\" class=\"mobile-icon\" href=\"https://play.google.com/store/apps/details?id=#{google_play_id} \"
        target=\"_blank\" name=\"google\">
         <picture>
           #{media_sources}
