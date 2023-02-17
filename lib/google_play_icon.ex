@@ -8,7 +8,7 @@ defmodule GooglePlayIcon do
 
   ## Examples
 
-      iex> ExGooglePlayIcon.render()
+      iex> GooglePlayIcon.render()
 
 
   """
