@@ -40,7 +40,7 @@ defmodule GooglePlayIcon do
       end)
       |> Enum.join(",")
 
-    "<section class='#{class}'><a id='GooglePlayIcon' class='#{class}' href='https://play.google.com/store/apps/details?id=#{google_play_id}' target='_blank' name='google'><picture>#{media_sources}<img srcset='#{srcset}' sizes='#{sizes}' src='#{default_image}' alt='#{alt_text}' class='#{class}'> </picture> </a></section>"
+    "<section class='#{class}'><a id='GooglePlayIcon' class='#{class}' href='https://play.google.com/store/apps/details?id=#{google_play_id}' target='_blank' name='google'><picture>#{media_sources}<img srcset='#{srcset}' sizes='#{sizes}' src='#{default_image}' alt='#{alt_text}' class='#{class}'> </picture></a></section>"
   end
 
   @doc """
