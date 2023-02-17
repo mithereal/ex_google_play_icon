@@ -7,9 +7,8 @@ defmodule GooglePlayIcon do
   render the google play icon with the store link.
 
   ## Examples
-
-      iex> GooglePlayIcon.render()
-
+  google_play_id = "your id here"
+      iex> GooglePlayIcon.render(google_play_id)
 
   """
 
@@ -55,5 +54,24 @@ defmodule GooglePlayIcon do
         </picture>
     </a>
 </section>"
+  end
+
+  @doc """
+  Generate a link.
+
+  ## Examples
+  google_play_id = "your id here"
+      iex> GooglePlayIcon.link(google_play_id)
+
+  """
+  def link(
+        google_play_id,
+        class \\ "play-store-mobile-icons",
+        name \\ "google",
+        target \\ "_blank",
+        id \\ "GooglePlayIcon"
+      ) do
+    "<a id=\"#{id}\" class=\"#{class}\" href=\"https://play.google.com/store/apps/details?id=#{google_play_id} \"
+       target=\"#{target}\" name=\"#{name}\">"
   end
 end
